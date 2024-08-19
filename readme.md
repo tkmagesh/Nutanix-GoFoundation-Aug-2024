@@ -123,3 +123,25 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - Functions can be assigned as values to variables
 - Functions can be passed as arguments to other functions
 - Functions can be returned as return values from other functions
+
+## Collections
+### Array
+- Fixed sized typed collection
+- Index based access
+- Use len() to get the count
+- Can be iterated using for-range construct
+### Slice
+- Varying sized typed collection
+- Index based access
+- Use len() to get the count
+- can be initialized using "make" function
+- Use append() to add new items
+- Can be iterated using for-range construct
+### Map
+- Typed collection of key-value pairs
+- Key based access
+- Use len() to get the count
+- can be initialized using "make" function
+- should be initialized before adding data to the map
+- Use delete() to remove a key/value pair 
+- Can be iterated using for-range construct
