@@ -137,6 +137,8 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - can be initialized using "make" function
 - Use append() to add new items
 - Can be iterated using for-range construct
+![image](./images/slices.png)
+
 ### Map
 - Typed collection of key-value pairs
 - Key based access

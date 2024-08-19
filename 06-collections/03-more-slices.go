@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var nos []int
 	// nos = make([]int, 0, 3)
-	nos = make([]int, 3, 3)
+	// nos = make([]int, 3, 3)
 	fmt.Printf("len(nos) = %d, cap(nos) = %d, nos = %v\n", len(nos), cap(nos), nos)
 
 	nos = append(nos, 10)
