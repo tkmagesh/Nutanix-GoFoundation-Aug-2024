@@ -32,32 +32,11 @@ func main() {
 	fmt.Print(greetUser("Magesh", "Kuppan"))
 
 	// use divide function as above
-}
-
-func getHello(userName string) string {
-	return fmt.Sprintf("Hello, %s!\n", userName)
-}
-
-/*
-func greet(firstName string, lastName string) string {
-	return fmt.Sprintf("Hello %s %s, Have a nice day!\n", firstName, lastName)
-}
-*/
-
-func greet(firstName, lastName string) string {
-	return fmt.Sprintf("Hello %s %s, Have a nice day!\n", firstName, lastName)
-}
-
-/*
-func divide(multiplier, divisor int) (int, int) {
-	quotient, remainder := multiplier/divisor, multiplier%divisor
-	return quotient, remainder
-}
-*/
-
-// named results (preferred for returning more than one result)
-func divide(multiplier, divisor int) (quotient, remainder int) {
-	// override the already declared & initialized variables
-	quotient, remainder = multiplier/divisor, multiplier%divisor
-	return
+	var divide func(int, int) (int, int)
+	divide = func(multiplier, divisor int) (quotient, remainder int) {
+		// override the already declared & initialized variables
+		quotient, remainder = multiplier/divisor, multiplier%divisor
+		return
+	}
+	fmt.Println(divide(100, 7))
 }
