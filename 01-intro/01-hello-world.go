@@ -5,12 +5,14 @@ package main
 import "fmt"
 
 /* package scoped variable / constant / type declarations */
+
 /* package init function */
 
 /* main function */
 func main() {
 	// fmt.Print("Hello, World!\n")
 	fmt.Println("Hello, World!")
+	// print("Hello World")
 }
 
 /* other functions */

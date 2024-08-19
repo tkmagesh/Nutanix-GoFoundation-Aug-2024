@@ -50,3 +50,70 @@
             - "sync" package
             - "sync/atomic" package
 
+## Go Lang
+### Data Types
+- bool
+- string
+- integers
+    - int8
+    - int16
+    - int32
+    - int64
+    - int
+- unsigned integers
+    - uint8
+    - uint16
+    - uint32
+    - uint64
+    - uint
+- floating points
+    - float32
+    - float64
+- complex numbers
+    - complex64 (real[float32] + imaginary[float32])
+    - complex128 (real[float64] + imaginary[float64])
+- type alias
+    - byte
+    - rune (unicode code point)
+
+#### Zero values
+
+| type | value |
+| -------|-------- |
+| int, uint, float | 0 |
+| string | "" |
+| bool | false |
+| func | nil |
+| struct | struct instance |
+| pointer |nil |
+| interface | nil | 
+
+## Build & Execute
+```
+go run [file_name.go]
+```
+## Create a build
+```
+go build [file_name.go]
+```
+## To list the env variables for the go tool
+```
+go env
+```
+```
+go env [var_1] [var_2] ....
+```
+## Env variables for cross compilation
+```
+go env GOOS GOARCH
+```
+## TO list the supported platforms (for cross compilation)
+```
+go tool dist list
+```
+## Cross compilation
+```
+GOOS=[supported os] GOARCH=[supported processor arch] go build [file_name.go]
+ex:
+GOOS=windows GOARCH=amd64 go build 01-hello-world.go
+```
