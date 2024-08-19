@@ -158,3 +158,6 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
     - fmt.Errorf()
     - custom type implementing "error" interface
 - by convention the error is the last value of return results
+
+## Deferred Functions
+- postpone (or defer) the execution of the function until the current function execution is completed
