@@ -147,3 +147,14 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - should be initialized before adding data to the map
 - Use delete() to remove a key/value pair 
 - Can be iterated using for-range construct
+
+## Errors
+- errors are values returned from a function
+- by convention, errors are objects implementing "error" interface
+- "error" interface
+    - Error() string
+- Creating an error
+    - errors.New()
+    - fmt.Errorf()
+    - custom type implementing "error" interface
+- by convention the error is the last value of return results
