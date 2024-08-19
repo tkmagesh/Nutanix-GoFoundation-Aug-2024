@@ -117,3 +117,9 @@ GOOS=[supported os] GOARCH=[supported processor arch] go build [file_name.go]
 ex:
 GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ```
+
+## Functions
+### Higher Order Functions (functions as data)
+- Functions can be assigned as values to variables
+- Functions can be passed as arguments to other functions
+- Functions can be returned as return values from other functions
