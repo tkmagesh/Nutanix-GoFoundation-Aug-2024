@@ -252,3 +252,31 @@ go mod vendor
 #### Detecting data race
 - https://go.dev/doc/articles/race_detector
 
+#### Share memory by communicating (channels)
+##### Declaration
+```go
+var [var_name] chan [data_type]
+// ex:
+var ch chan int
+```
+##### Initialization
+```go
+[var_name] = make(chan [data_type])
+// ex:
+ch = make(chan int)
+```
+##### Declaration & Initialization
+```go
+ch := make(chan int)
+```
+##### Channel Operation (using channel operator [ <- ])
+###### Send Operation
+```go
+ch <- 100
+```
+###### Receive Operation
+```go
+data := <-ch
+```
+
+
