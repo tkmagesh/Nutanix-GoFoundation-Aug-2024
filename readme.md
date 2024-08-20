@@ -171,3 +171,36 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ### Recovery
 - Use the recover() to access the error that led to the panic
 
+## Modules & Packages
+### Module
+- Any code (application OR library) that has to be versioned and deployed together
+- A folder with go.mod file
+- go.mod
+    - name
+        - by convension, the repo path is used as module name
+    - go runtime version targetted
+    - dependencies
+#### To create a module
+```
+go mod init [module_name]
+```
+#### To execute a module
+```
+go run .
+```
+#### To build a module
+```
+go build .
+(OR)
+go build -o [binary_name] .
+```
+
+### Package
+- Internal organization of a module
+- Typically just a folder
+- All the code in all the files in the package share the package as identity
+- A package has to be imported to be used in another package
+- Packages can be nested
+- "init" function can be used for package initialization
+- more than one "init" function is allowed
+- Order or execution of the "init" function is non-deterministic
