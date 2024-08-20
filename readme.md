@@ -204,3 +204,23 @@ go build -o [binary_name] .
 - "init" function can be used for package initialization
 - more than one "init" function is allowed
 - Order or execution of the "init" function is non-deterministic
+
+### Using 3rd party modules/packages
+#### To import 3rd party module
+```
+go get [-u] [module_name]
+```
+#### To update the go.mod file
+```
+go mod tidy
+```
+#### To download the dependencies documented in the go.mod file
+```
+go mod download
+```
+#### To localize the dependencies in the app folder 
+```
+go mod vendor
+```
+### Module commands
+- [Reference](https://go.dev/ref/mod)

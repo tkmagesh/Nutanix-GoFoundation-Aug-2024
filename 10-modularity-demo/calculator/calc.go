@@ -1,12 +1,13 @@
 package calculator
 
-import "fmt"
+import "github.com/fatih/color"
 
 // private
 var opCount map[string]int
 
 func init() {
-	fmt.Println("calculator initialized - [calc.go]")
+	color.Red("calculator initialized - [calc.go]")
+	// fmt.Println("calculator initialized - [calc.go]")
 	opCount = make(map[string]int)
 }
 
