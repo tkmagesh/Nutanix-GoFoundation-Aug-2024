@@ -28,4 +28,8 @@ func main() {
 	// var newProduct = &models.Product{}
 	var newProduct = models.NewProduct(101, "Pencil", 5)
 	fmt.Println(newProduct)
+
+	// var emp models.Employee
+	var emp = new(models.Employee)
+	fmt.Printf("%+v\n", emp)
 }
