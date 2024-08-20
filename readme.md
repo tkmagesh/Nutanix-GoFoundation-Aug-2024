@@ -203,7 +203,7 @@ go build -o [binary_name] .
 - Packages can be nested
 - "init" function can be used for package initialization
 - more than one "init" function is allowed
-- Order or execution of the "init" function is non-deterministic
+- Order of execution of the "init" function is non-deterministic
 
 ### Using 3rd party modules/packages
 #### To import 3rd party module
