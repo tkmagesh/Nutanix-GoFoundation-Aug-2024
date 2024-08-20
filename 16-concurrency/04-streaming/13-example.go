@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	ch := make(chan int)
+	ch := make(chan []int)
 	go genData(ch)
 	fmt.Println(<-ch)
 	fmt.Println(<-ch)
@@ -15,15 +15,15 @@ func main() {
 	fmt.Println(<-ch)
 }
 
-func genData(ch chan int) {
-	ch <- 10
+func genData(ch chan []int) {
+	ch <- []int{10}
 	time.Sleep(500 * time.Millisecond)
-	ch <- 20
+	ch <- []int{10, 20}
 	time.Sleep(500 * time.Millisecond)
-	ch <- 30
+	ch <- []int{10, 20, 30, 40}
 	time.Sleep(500 * time.Millisecond)
-	ch <- 40
+	ch <- []int{10}
 	time.Sleep(500 * time.Millisecond)
-	ch <- 50
+	ch <- []int{10}
 	time.Sleep(500 * time.Millisecond)
 }
