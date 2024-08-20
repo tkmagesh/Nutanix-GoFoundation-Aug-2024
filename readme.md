@@ -224,3 +224,27 @@ go mod vendor
 ```
 ### Module commands
 - [Reference](https://go.dev/ref/mod)
+
+## Concurrency
+- Concurrency Programming
+    - Ability to have more than one execution path
+    - Achieved using OS threads
+    - OS Thread scheduler is responsible for scheduling the thread execution
+        - Cooperative multitasking
+        - Preemptive multitasking
+![image](./images/OS-Thread-Concurrency.png)
+
+### Go Concurrency
+- Concurrent operations are represented as Goroutines
+- Goroutines are cheap (4 KB)
+- Builtin scheduler that schedules the goroutines through OS Threads
+- Support for concurrency is built in the language
+    - "go" keyword, "channel" data type, channel "<-" operator, "range" & "select-case" constructs
+    - standard library APIs
+        - "sync" package
+        - "sync/atomic" package
+![image](./images/Go-Concurrency-Model.png)
+
+#### sync.WaitGroup
+- semaphore based counter
+- has the ability to block the execution of a function until the counter becomes 0
